@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnResetHomework"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="22dp"
+        android:onClick="addOne"
+        android:text="RESET"
+        app:layout_constraintBaseline_toBaselineOf="@+id/homework"
+        app:layout_constraintEnd_toStartOf="@+id/homework"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <EditText
+        android:id="@+id/homework"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="35dp"
+        android:hint="Homework"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toTopOf="@+id/Midterm1"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddHomework"
+        app:layout_constraintStart_toEndOf="@+id/btnResetHomework"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnAddHomework"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:text="ADD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/homework"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homework"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <EditText
+        android:id="@+id/Midterm1"
+        android:layout_width="137dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="30dp"
+        android:hint="Midterm 1"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toTopOf="@+id/Midterm2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homework"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/Midterm2"
+        android:layout_width="137dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="38dp"
+        android:hint="Midterm 2"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toTopOf="@+id/Participation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Midterm1"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/Participation"
+        android:layout_width="137dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="37dp"
+        android:hint="Participation"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toTopOf="@+id/GroupPresentation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Midterm2"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/GroupPresentation"
+        android:layout_width="137dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="35dp"
+        android:hint="Group Presentation"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toTopOf="@+id/FinalProject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Participation"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/FinalProject"
+        android:layout_width="137dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="42dp"
+        android:hint="Final Project"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GroupPresentation"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:onClick="Calculate"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/FinalProject"
+        app:layout_constraintTop_toBottomOf="@+id/FinalProject"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="38dp"
+        android:text="Calculate your grade!"
+        android:textColor="@color/purple_200"
+        app:layout_constraintBottom_toTopOf="@+id/homework"
+        app:layout_constraintStart_toStartOf="@+id/homework"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/hws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Homeworks: "
+        app:layout_constraintTop_toBottomOf="@+id/btnResetHomework"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
